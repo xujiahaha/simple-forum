@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+	<title>BitTiger Forum</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="facivon.ico">
+
+    <link href="http://packetcode.com/apps/facebook-like-chat/style.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://packetcode.com/apps/facebook-like-chat/script.js"></script>
+
+	<link rel="stylesheet" type="text/css" href={% static "css/app.css" %}>
+    <link rel="stylesheet" type="text/css" href={% static "css/chat.css" %}>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block head-extra %} {% endblock %}
+</head>
+
+<body>
+
+
+    {% block navbar %}
+        {% include 'nav_bar.html' %}
+    {% endblock navbar %}
+
+    <div class="container">
+        <div class="row">
+          {% block contentwrap %}{% endblock contentwrap %}
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+          {% include 'chat.html' %}
+        </div>
+    </div>
+
+    {% block more_javascript %}
+
+    {% endblock more_javascript %}
+
+</body>
+
+</html>

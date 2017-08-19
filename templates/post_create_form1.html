@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<div class="form-group">
+        <div class="row">
+            <div class="col-sm-9">
+                <input placeholder="Title" type="text" class="form-control post-input" id="postTitle" name="title" required>
+                <input placeholder="A comma-separated list of tags." type="text" class="form-control post-input" id="postTags" name="tags">
+            </div>
+            <div class="col-sm-3">
+                <div id="form-dropdown" class="dropdown" style="margin-bottom: 15px;">
+                  <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: transparent; border-color: #666666">
+                      <span id="formDropdownBtn">category</span> &nbsp;<span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="postCategoryDropdown">
+                      <li><a class="dropdown-item postCategory" name="category_pk" value="4">project 1</a></li>
+                      <li><a class="dropdown-item postCategory" name="category_pk" value="5">project 2</a></li>
+                      <li><a class="dropdown-item postCategory" name="category_pk" value="6">capstone</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="col-sm-10" style="padding-right: 10px;">
+                <textarea name="content" id="postContent"></textarea>
+            </div>
+         </div>
+
+        <div style="padding: 5px" id="postPublic">
+            <span style="padding-right: 15px">Post to</span>
+            <label class="radio-inline"><input type="radio" name="public" value="1" required>Public</label>
+            <label class="radio-inline"><input type="radio" name="public" value="0" checked>Class</label>
+        </div>
+        <span style="padding: 5px;">Post Anonymously</span><input type="checkbox" name="anonymous" style="margin-left: 8px" id="postAnonymous">
+</div>
+
+
+<script type="text/javascript" src="{% static "tinymce/js/tinymce/tinymce.min.js" %}"></script>
+<script type="text/javascript" src="{% static 'js/tinymce_config.js' %}"></script>

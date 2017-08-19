@@ -1,0 +1,139 @@
+body {
+  padding-top: 80px;
+  margin-bottom: 80px;
+  font-family: sans-serif;
+  background: transparent !important;
+}
+
+.create-discussion  {
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 20px;
+  padding: 5px;
+  border: 1px solid grey;
+}
+
+.create-discussion span {
+  font-weight: bold;
+}
+
+hr {
+  margin-bottom: 5px;
+  margin-top: 0px !important;
+}
+
+.stats {
+  color: #848d95;
+}
+
+.tags {
+  display: inline-block;
+  padding: 5px 5px 5px 5px;
+  font-size: 12px;
+  background-color: #E1ECF4;
+  border-color: transparent;
+  color: #39739d;
+}
+
+.question-hyperlink {
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 0 !important;
+}
+
+.instr-indicator {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-right: 3px;
+  font-size: 16px;
+}
+
+.category-dropdown {
+  border: 1px solid #ccc !important;
+  border-radius: 4px;
+  height: 34px;
+}
+.post-input {
+  margin-bottom: 10px !important;
+}
+#tabs a.selected-tab {
+  padding-bottom: 14px;
+  font-weight: 400;
+  border-color: #e4e6e8;
+  border-bottom-color: transparent;
+  color: #242729;
+}
+
+#tabs a {
+  position: relative;
+  padding: 13px 10px;
+  background-color: #FFF;
+  border: 1px solid transparent;
+  font-size: 12px;
+  color: #848d95;
+  line-height: 1;
+  transition: all .15s ease-in-out;
+}
+
+#tabs {
+  float: right;
+}
+
+.subheader {
+  clear: both;
+  border-bottom: 1px solid #e4e6e8;
+  margin-bottom: 0px;
+  height: 40px;
+}
+
+.replyCount h2 {
+  font-weight: 400;
+  color: #3b4045;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.placeholder {
+  border-bottom: 1px solid #e4e6e8;
+}
+
+.post-detail p {
+  font-size: 15px;
+}
+
+.replyContent {
+  margin-top: 10px;
+}
+
+.replyContent h2 {
+  font-size: 19px;
+}
+
+.announcement-div {
+  background-color: #eff0f1;
+  border-color: #e7e7e7;
+  border-radius: 5px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.commentContent {
+  font-size: 12px;
+  padding-left: 35px;
+  margin-top: 20px;
+}
+
+.commentContent p {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+tr.commentBody td {
+  border-bottom: 1px solid #e4e6e8;
+  display: block;
+}
+
+
+.commentTime {
+  color: #9199a1;
+}

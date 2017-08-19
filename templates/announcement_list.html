@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block contentwrap %}
+    <div class="col-md-8 col-md-offset-2">
+    <h2>Announcements</h2>
+        {% for announcement in announcements %}
+        <div class="announcement-div">
+            <div class="announcement-title">
+                <h5>{{ announcement.title }}</h5>
+            </div>
+            <div class="announcement-time" style="margin-bottom: 5px">
+                {{ announcement.created_on }}
+            </div>
+            <div class="announcement-content">
+                {{ announcement.content | safe }}
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+
+
+{% endblock contentwrap %}
