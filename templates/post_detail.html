@@ -16,7 +16,8 @@
                     {% endfor %}
                     <h3 class="placeholder" style="margin-top: 10px !important;">
                         {{ post.title }}
-                        <div class="post-stats" style="display: inline; font-size: 80%">
+                        <span style="font-size: 50%"> Post by {{ post.author.username }} on {{ post.created_on }}</span>
+                        <div class="post-stats" style="display: inline; font-size: 80%; float: right">
                             <small>Views {{ post.get_num_view }}</small>
                             <small>Replies {{ post.get_num_reply }}</small>
                             <small>Follows {{ post.get_num_follow }}</small>

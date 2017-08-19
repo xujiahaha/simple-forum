@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth.views import login, logout
 
 from posts.views import announcement_list
 
@@ -23,4 +24,6 @@ urlpatterns = [
     url(r'^posts/', include('posts.urls', namespace='posts')),
     url(r'^announcements/', announcement_list, name="announcement_list"),
     url(r'hitcount/', include('hitcount.urls', namespace='hitcount')),
+    url(r'^accounts/login/$', login, name='login'),
+    url(r'^logout/$', logout, name='logout'),
 ]

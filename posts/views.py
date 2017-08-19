@@ -75,6 +75,8 @@ def post_list(request, tag_slug=None, category_slug=None):
 def get_posts_by_category(request, category_slug):
     category = get_object_or_404(Category, slug=category_slug)
     posts = Post.objects.filter(category=category)
+    if not request.user.is_authenticated():
+        posts = posts.filter(public=True)
     if request.is_ajax():
         html = render_to_string('post_list_content.html', {'posts': posts})
         return HttpResponse(html)
