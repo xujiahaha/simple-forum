@@ -13,9 +13,11 @@
                       <span id="filterDropdownBtn">all categories</span> &nbsp;<span class="caret"></span></button>
                   <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="{% url "posts:list" %}">all categories</a></li>
-                      {% for category in categories %}
-                          <li><a class="dropdown-item ajaxCall" value="{{ category.slug }}">{{ category.title }}</a></li>
-                      {% endfor %}
+                      {% if user.is_authenticate %}
+                          {% for category in categories %}
+                              <li><a class="dropdown-item ajaxCall" value="{{ category.slug }}">{{ category.title }}</a></li>
+                          {% endfor %}
+                      {% endif %}
                   </ul>
                 </div>
                 <div id="tabs">

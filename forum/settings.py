@@ -143,12 +143,9 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
 
-# LOGIN_URL = '/accounts/login/'
-# LOGOUT_URL = '/accounts/logout'
+LOGIN_URL = '/accounts/login/'
+LOGOUT_URL = '/accounts/logout'
 
 HITCOUNT_HITS_PER_IP_LIMIT = 0  # unlimited
 HITCOUNT_EXCLUDE_USER_GROUP = ()  # not used
 HITCOUNT_KEEP_HIT_ACTIVE = { 'minutes': 5 }
-
-SESSION_COOKIE_SECURE = True
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
